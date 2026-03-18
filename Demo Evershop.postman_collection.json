@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "d2145ae6-2f03-46c3-b1e6-ef4ebb8e70c3",
+		"name": "Demo Evershop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49440752",
+		"_collection_link": "https://khanholy3-3089622.postman.co/workspace/Tanjila's-Workspace~83dc53fd-4fa9-455a-81b7-703b1d36b66e/collection/49440752-d2145ae6-2f03-46c3-b1e6-ef4ebb8e70c3?action=share&source=collection_link&creator=49440752"
+	},
+	"item": [
+		{
+			"name": "search item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo.evershop.io/search?keyword=Ceramic&ajax=true",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Ceramic"
+						},
+						{
+							"key": "ajax",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view item details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo.evershop.io/accessories/modern-ceramic-vase-black?ajax=true",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"accessories",
+						"modern-ceramic-vase-black"
+					],
+					"query": [
+						{
+							"key": "ajax",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view item details with color & size",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo.evershop.io/accessories/modern-ceramic-vase-green?ajax=true&color=2",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"accessories",
+						"modern-ceramic-vase-green"
+					],
+					"query": [
+						{
+							"key": "ajax",
+							"value": "true"
+						},
+						{
+							"key": "color",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"VASE-004-BLK\",\r\n \"qty\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/cart/mine/items",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"cart",
+						"mine",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view cart",
+			"request": {
+				"auth": {
+					"type": "basic"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "ajax",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://demo.evershop.io/cart",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
